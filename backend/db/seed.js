@@ -1,5 +1,6 @@
 const User = require("../models/user");
-
+const Listing = require("../models/listing");
+const Comment = require("../models/comment");
 
 async function seed() {
 	try {

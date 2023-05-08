@@ -13,7 +13,7 @@ export class UserService {
   public user: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
   constructor(private http: HttpClient, private r: Router) {
-    this.http.get<any>('/api/users/auth').subscribe((response) => {
+    this.http.get<{ message: string, user: User }>('/api/users/auth').subscribe((response) => {
       if (response.message === "Belépve") {
         this.authenticated.next(true);
         this.user.next(response.user);
@@ -26,8 +26,8 @@ export class UserService {
   }
 
   login(username: string, password: string) {
-    this.http.post<User>('/api/users/login', { username, password }).subscribe((user) => {
-      this.user.next(user);
+    this.http.post<{ message: string, user: User }>('/api/users/login', { username, password }).subscribe((user) => {
+      this.user.next(user.user);
       this.authenticated.next(true);
       this.r.navigate(['/dashboard']);
     });

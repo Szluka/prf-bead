@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
+import { ListingItemComponent } from './listing-item/listing-item.component';
+import { ListingDetailComponent } from './listing-detail/listing-detail.component';
+import { ListingFormComponent } from './listing-form/listing-form.component';
+import { ListingAllComponent } from './listing-all/listing-all.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,18 @@ import { NavComponent } from './nav/nav.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    ListingItemComponent,
+    ListingDetailComponent,
+    ListingFormComponent,
+    ListingAllComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

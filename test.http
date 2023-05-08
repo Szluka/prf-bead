@@ -1,7 +1,7 @@
-@apiurl = http://localhost:3000/api/users
+@apiurl = http://localhost:3000/api
 
 
-post {{apiurl}}/register
+post {{apiurl}}/users/register
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 
 ###
 
-post {{apiurl}}/login
+post {{apiurl}}/users/login
 content-type: application/json
 
 {
@@ -20,8 +20,22 @@ content-type: application/json
 }
 ###
 
-get {{apiurl}}/auth
+get {{apiurl}}/users/auth
+
+###
+
+post {{apiurl}}/users/logout
 
 ###
 
 get {{apiurl}}/listings
+
+###
+
+post {{apiurl}}/listings
+Content-Type: application/json
+
+{
+	"title":"keresek 1 not",
+	"description": "keresek 1 not"
+}

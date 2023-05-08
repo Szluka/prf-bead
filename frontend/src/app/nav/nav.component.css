@@ -1,0 +1,39 @@
+nav {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+li:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+}

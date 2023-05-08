@@ -4,6 +4,7 @@ const User = require("../models/user");
 
 const userRouter = Router();
 
+
 userRouter.post("/register", async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
@@ -29,18 +30,30 @@ userRouter.post("/login", (req, res) => {
     }
     req.logIn(user, (err) => {
       if (err) return res.status(500).json({ message: err });
-      return res.status(200).json({ message: "Sikeres bejelentkezés" });
+      return res.status(200).json({
+        message: "Sikeres bejelentkezés",
+        user: {
+          username: user.username,
+          _id: user._id,
+        }
+      });
     });
   })(req, res);
 });
 userRouter.get("/auth", (req, res) => {
-  if (req.user) return res.status(200).json({ message: "Belépve", user:req.user });
+  if (req.user) return res.status(200).json({
+    message: "Belépve", user: {
+      username: req.user.username, _id: req.user._id
+    }
+  });
   return res.status(401).json({ message: "Nincs bejelentkezve" });
 });
 
 userRouter.post("/logout", (req, res) => {
-  req.logout();
-  return res.status(200).json({ message: "Sikeres kijelentkezés" });
+  req.logout(() => {
+    return res.status(200).json({ message: "Sikeres kijelentkezés" });
+  });
 });
+
 
 module.exports = userRouter;

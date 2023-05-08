@@ -1,0 +1,23 @@
+<h3>Details:</h3>
+
+<div *ngIf="listing | async as listing; else loading">
+
+    cim: {{listing.title}}
+    <br>
+    leiras: {{listing.description}}
+    <br>
+    felhasznalo: {{listing.user.username}}
+    <br>
+    <div *ngIf="user">
+        <button *ngIf="listing.user._id === user?._id" (click)="delete(listing._id)">delete</button>
+    </div>
+
+    <br>
+    <button (click)="upvote(listing._id)" [disabled]="listing.user._id === user?._id">
+        Upvote ({{listing.upvotes}})
+    </button>
+</div>
+
+<ng-template #loading>
+    <p>loading...</p>
+</ng-template>
