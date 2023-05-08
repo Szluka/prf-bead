@@ -7,8 +7,8 @@ async function seed() {
 		const testUser = await User.findOne({ username: "andras" });
 		if (!testUser) {
 			const newUser = new User({
-				username: "andras",
-				password: "andras",
+				username: "teszt",
+				password: "teszt",
 			});
 			await newUser.save();
 			console.log("Teszt felhasználó létrehozva");

@@ -1,9 +1,40 @@
 # Kommentezős weboldal fejlesztése
 
-## Feladat
+## Feladat megvalósítása
 
-hkhkhkjh
+### Backend:
 
+- backend statikusan hostolja a frontendet: 
+    - public mappába ment 
+- MogoDB: 
+    -   localhoston keresztül csatlakozik hozzá
+- Bootstrapelés (seedelés): 
+    -   db/seed.js
+- 2 modell:
+     -   Listing és Comment
+- hook: 
+    -   jelszó titkosítás regisztrációkor
+- lokális auth. stratégia: 
+    -   passport.js
+- login session szerverrel: 
+    -   passport.js
+- CRUDok és Routeok: 
+    -   users.router.js & listings.router.js
+
+### Frontend:
+
+- kommunikáció: 
+    -   igen
+- routok: 
+    -   app-routing.module.ts
+- A frontend rendelkezik legalább egy regisztráció, egy login, egy főoldal/terméklista, egy admin felület, egy termék részletező és egy egyéb komponenssel, melyek fel vannak töltve megfelelő tartalommal: 
+    -   login, register, list, rá lehet kattintani az egyes posztokra, logout.
+- A frontend a bejelentkezéshez a backend megfelelő végpontjait szólítja meg: 
+    -   igen
+- A backenddel való kommunikáció elemei ki vannak szervezve service-ekbe: 
+    -   igen
+- Van authguard, amely védi a login, register utáni route-okat és az admin felületét:
+    - auth.guard.ts
 
 
 ## Lokális telepítés, tesztelés, futtatás
