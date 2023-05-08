@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { Listing } from './listing';
 
 @Injectable({
@@ -33,7 +33,9 @@ export class ListingService {
   }
 
   addComment(id: string, comment: { text: string }): Observable<Listing> {
-    return this.http.post<Listing>(`/api/listings/${id}/comments`, comment);
+    return this.http.post<Listing>(`/api/listings/${id}/comments`, comment).pipe(
+      tap(() => this.refetchSub.next(null))
+    )
   }
 
   upvoteListing(id: string): Observable<Listing> {

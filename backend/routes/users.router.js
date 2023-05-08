@@ -35,6 +35,7 @@ userRouter.post("/login", (req, res) => {
         user: {
           username: user.username,
           _id: user._id,
+          role: user.role,
         }
       });
     });
@@ -43,7 +44,7 @@ userRouter.post("/login", (req, res) => {
 userRouter.get("/auth", (req, res) => {
   if (req.user) return res.status(200).json({
     message: "Belépve", user: {
-      username: req.user.username, _id: req.user._id
+      username: req.user.username, _id: req.user._id, role: req.user.role
     }
   });
   return res.status(401).json({ message: "Nincs bejelentkezve" });

@@ -5,7 +5,7 @@
                 List
             </li>
         </div>
-        <div *ngIf="!isAuth; else loggedout">
+        <div *ngIf="!isAuth; else auth">
             <li routerLink="/login">
                 Login
             </li>
@@ -13,10 +13,12 @@
                 Register
             </li>
         </div>
-        <ng-template #loggedout>
+        <ng-template #auth>
             <li routerLink="/new-listing">
                 New Listing
             </li>
+            <li *ngIf="user?.role==='admin'" routerLink="/admin">
+                Admin
             <li>
                 logged in as {{user?.username}}
             </li>

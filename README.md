@@ -14,6 +14,7 @@
      -   Listing és Comment
 - hook: 
     -   jelszó titkosítás regisztrációkor
+    -   A FELHASZNÁLÓNEVET ÁTÍRJA CSUPA KISBETŰRE!!!
 - lokális auth. stratégia: 
     -   passport.js
 - login session szerverrel: 
@@ -35,7 +36,6 @@
     -   igen
 - Van authguard, amely védi a login, register utáni route-okat és az admin felületét:
     - auth.guard.ts
-
 
 ## Lokális telepítés, tesztelés, futtatás
 
@@ -72,3 +72,12 @@ majd a `backend` mappában:
 ```bash
 npm run start
 ```
+
+### 4. Bejelentkezés
+    Sima user:
+    Felhasználónév: user
+    Jelszó: user
+
+    Admin:
+    Felhasználónév:: admin
+    Jelszó: admin

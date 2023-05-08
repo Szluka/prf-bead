@@ -1,0 +1,4 @@
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit(commentForm.value)">
+    <input type="text" placeholder="Comment..." formControlName="text" />
+    <button type="submit">Add</button>
+</form>

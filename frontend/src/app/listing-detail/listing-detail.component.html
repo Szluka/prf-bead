@@ -24,6 +24,15 @@
                 ❤️ ({{listing.upvotes}})
             </button>
         </div>
+        <!-- comments -->
+        <div class="comments">
+            <app-comment-list [comments]="listing.comments">
+            </app-comment-list>
+        </div>
+        <div class="add-comment">
+            <app-comment-form [listingId]="listing._id">
+            </app-comment-form>
+        </div>
     </div>
 
     <ng-template #loading>

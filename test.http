@@ -5,7 +5,7 @@ post {{apiurl}}/users/register
 Content-Type: application/json
 
 {
-	"username":"teszt",
+	"username":"teszt2",
 	"password":"teszt"
 }
 

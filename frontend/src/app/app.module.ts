@@ -13,6 +13,9 @@ import { ListingItemComponent } from './listing-item/listing-item.component';
 import { ListingDetailComponent } from './listing-detail/listing-detail.component';
 import { ListingFormComponent } from './listing-form/listing-form.component';
 import { ListingAllComponent } from './listing-all/listing-all.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ListingAllComponent } from './listing-all/listing-all.component';
     ListingItemComponent,
     ListingDetailComponent,
     ListingFormComponent,
-    ListingAllComponent
+    ListingAllComponent,
+    CommentListComponent,
+    CommentFormComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

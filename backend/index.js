@@ -9,7 +9,7 @@ const cookiePaser = require("cookie-parser");
 
 const app = express();
 
-mongoose.connect("mongodb://0.0.0.0/prf-bandi-boy")
+mongoose.connect("mongodb://0.0.0.0/prf-2023-listings")
   .then(() => console.log("Adatbázis kapcsolódva"));
 
 const db = mongoose.connection;
@@ -38,7 +38,8 @@ passport.use(
       if (!isMatch) return done("Hibás jelszó", null);
       return done(null, {
         username,
-        _id: user._id
+        _id: user._id,
+        role: user.role
       });
     });
   }),

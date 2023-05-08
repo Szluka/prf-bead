@@ -1,0 +1,19 @@
+<div class="all-listing">
+    <h3>
+        Admin page - only accessible to admin users
+    </h3>
+
+    <p>
+        You can delete any listing from here (even if you didn't create it).
+    </p>
+    <div class="list-elements ">
+        <div class="list-element" [routerLink]="['/listing', listing._id]" *ngFor="let listing of listings|async">
+            <b>
+                {{listing.user.username}}:
+            </b>
+            <span>{{listing.title}}</span>
+            <i>({{listing.upvotes}} upvotes)</i>
+            <button class="delete-button" (click)="delete(listing._id)">🗑️</button>
+        </div>
+    </div>
+</div>
