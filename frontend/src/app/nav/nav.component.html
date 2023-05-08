@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li>
+            <a routerLink="/dashboard">Dashboard</a>
+
+        </li>
+        <div *ngIf="isAuth; else loggedout">
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+            <li>
+                <a routerLink="/register">Register</a>
+            </li>
+        </div>
+        <ng-template #loggedout>
+            <li>
+                <a (click)="logout()">Log Out</a>
+            </li>
+        </ng-template>
+    </ul>
+</nav>

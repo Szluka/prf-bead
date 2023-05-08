@@ -1,0 +1,27 @@
+@apiurl = http://localhost:3000/api/users
+
+
+post {{apiurl}}/register
+Content-Type: application/json
+
+{
+	"username":"teszt",
+	"password":"teszt"
+}
+
+###
+
+post {{apiurl}}/login
+content-type: application/json
+
+{
+	"username":"teszt",
+	"password":"teszt"
+}
+###
+
+get {{apiurl}}/auth
+
+###
+
+get {{apiurl}}/listings

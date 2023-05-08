@@ -1,0 +1,18 @@
+nav {
+  background-color: #563d7c;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
