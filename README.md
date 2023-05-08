@@ -81,3 +81,7 @@ npm run start
     Admin:
     Felhasználónév:: admin
     Jelszó: admin
+
+### 5. Extra infók
+    sima userként csak a saját kommentedet tudod törölni
+    saját kommentedet nem tudod lájkolni
