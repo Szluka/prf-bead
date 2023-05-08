@@ -10,8 +10,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username: string='';
-  password: string='';
+  username: string = '';
+  password: string = '';
 
   loginSubscription!: Subscription;
 
@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginSubscription = this.userService.authenticated.subscribe((authenticated) => {
       if (authenticated) {
-        console.log("authenticated");
         this.r.navigate(['/dashboard']);
       }
     });

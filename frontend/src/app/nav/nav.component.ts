@@ -23,7 +23,6 @@ export class NavComponent implements OnInit {
 
     this.userSubscription = this.userService.user.subscribe(
       (value) => {
-        console.log(`User changed: ${JSON.stringify(value)}`);
         this.user = value
       }
     )

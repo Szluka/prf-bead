@@ -35,7 +35,6 @@ export class ListingDetailComponent implements OnInit {
     });
     this.userSubscription = this.userService.user.subscribe(
       (value) => {
-        console.log(`[listing detail] User changed: ${JSON.stringify(value)}`);
         this.user = value
       }
     );

@@ -27,7 +27,6 @@ export class ListingFormComponent {
   onSubmit(formData: { title: string, description: string }): void {
     this.listingService.createListing(formData).subscribe(
       (listing) => {
-        console.log(`[listing form] Created listing: ${JSON.stringify(listing)}`);
         this.r.navigate(['/listing/' + listing._id]);
       }
     );

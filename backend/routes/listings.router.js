@@ -24,7 +24,6 @@ r.get("/", async (req, res) => {
 			},
 		})
 		.sort({ upvotes: -1 });
-	console.log(listings)
 	return res.status(200).json(listings);
 });
 

@@ -18,7 +18,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.regSubscription = this.userService.authenticated.subscribe((authenticated) => {
       if (authenticated) {
-        console.log("authenticated");
         this.r.navigate(['/dashboard']);
       }
     });

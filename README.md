@@ -1,5 +1,10 @@
 # Kommentezős weboldal fejlesztése
 
+Szluka András, XC291J
+
+Programrendszerek fejlesztése IMN109L-1
+
+
 ## Feladat megvalósítása
 
 ### Backend:
