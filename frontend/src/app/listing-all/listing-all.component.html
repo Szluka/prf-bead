@@ -1,13 +1,14 @@
-<h3>
-    these are all the listings:
-</h3>
-<ul>
-    <li *ngFor="let listing of listings|async">
-        <b>
-            {{listing.user.username}}:
-        </b>
-        <a [routerLink]="['/listing', listing._id]">
-            {{listing.title}} ({{listing.upvotes}} upvotes)
-        </a>
-    </li>
-</ul>
+<div class="all-listing">
+    <h3>
+        Listing the posts:
+    </h3>
+    <div class="list-elements ">
+        <div class="list-element" [routerLink]="['/listing', listing._id]" *ngFor="let listing of listings|async">
+            <b>
+                {{listing.user.username}}:
+            </b>
+            <span>{{listing.title}}</span>
+            <i>({{listing.upvotes}} upvotes)</i>
+        </div>
+    </div>
+</div>

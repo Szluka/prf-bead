@@ -1,23 +1,32 @@
-<h3>Details:</h3>
+<div class="listing-detail">
+    <div class="text" *ngIf="listing | async as listing; else loading">
 
-<div *ngIf="listing | async as listing; else loading">
+        <div class="title">
+            {{listing.title}}
+        </div>
+        Posted by: <b>{{listing.user.username}}</b>
+        <br>
+        <br>
+        <div class="description">
+            <span>{{listing.description}}</span>
+        </div>
+        <br>
+        <div class="flex-box">
 
-    cim: {{listing.title}}
-    <br>
-    leiras: {{listing.description}}
-    <br>
-    felhasznalo: {{listing.user.username}}
-    <br>
-    <div *ngIf="user">
-        <button *ngIf="listing.user._id === user?._id" (click)="delete(listing._id)">delete</button>
+            <button class="back-button" routerLink="/dashboard">
+                🔙
+            </button>
+            <div *ngIf="user">
+                <button class="delete-button" *ngIf="listing.user._id === user?._id"
+                    (click)="delete(listing._id)">🗑️</button>
+            </div>
+            <button class="upvote-button" (click)="upvote(listing._id)" [disabled]="listing.user._id === user?._id">
+                ❤️ ({{listing.upvotes}})
+            </button>
+        </div>
     </div>
 
-    <br>
-    <button (click)="upvote(listing._id)" [disabled]="listing.user._id === user?._id">
-        Upvote ({{listing.upvotes}})
-    </button>
+    <ng-template #loading>
+        <p>loading...</p>
+    </ng-template>
 </div>
-
-<ng-template #loading>
-    <p>loading...</p>
-</ng-template>

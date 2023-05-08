@@ -1,26 +1,28 @@
 <nav>
     <ul>
-        <li>
-            <a routerLink="/dashboard">Dashboard</a>
+        <div *ngIf="isAuth">
+            <li routerLink="/dashboard">
+                Dashboard
 
-        </li>
-        <div *ngIf="!isAuth; else loggedout">
-            <li>
-                <a routerLink="/login">Login</a>
             </li>
-            <li>
-                <a routerLink="/register">Register</a>
+        </div>
+        <div *ngIf="!isAuth; else loggedout">
+            <li routerLink="/login">
+                Login
+            </li>
+            <li routerLink="/register">
+                Register
             </li>
         </div>
         <ng-template #loggedout>
-            <li>
-                <a routerLink="/new-listing">New Listing</a>
+            <li routerLink="/new-listing">
+                New Listing
             </li>
             <li>
                 logged in as {{user?.username}}
             </li>
-            <li>
-                <a (click)="logout()">Log Out</a>
+            <li (click)="logout()">
+                Log Out
             </li>
         </ng-template>
     </ul>

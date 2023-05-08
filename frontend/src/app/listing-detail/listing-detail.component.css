@@ -1,0 +1,78 @@
+.listing-detail {
+    margin-bottom: 20px;
+    padding: 5px 20px 20px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.text {
+    line-height: 1.5;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.delete-button {
+    background-color: #fff;
+    color: #333333;
+    border: 3px solid #333333;
+    font-size: large;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.upvote-button {
+    background-color: #fff;
+    color: #ff0000;
+    border: 3px solid #ff0000;
+    font-size: large;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.back-button {
+    background-color: #fff;
+    color: rgb(0, 120, 215);
+    border: 3px solid rgb(0, 120, 215);
+    font-size: large;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.back-button:hover {
+    background-color: rgb(0, 120, 215);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.delete-button:hover {
+    background-color: #333333;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.upvote-button:hover {
+    background-color: #ff0000;
+    color: #fff;
+    transition: 0.5s;
+}

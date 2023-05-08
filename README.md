@@ -1,3 +1,11 @@
+# Kommentezős weboldal fejlesztése
+
+## Feladat
+
+hkhkhkjh
+
+
+
 ## Lokális telepítés, tesztelés, futtatás
 
 ### 1. Környezet
@@ -9,12 +17,14 @@ A program futtatásához szükséges a Node.js és a NPM telepítése. Valamint 
 a `backend` mappában:
 
 ```bash
+cd client
 npm install
 ```
 
 a `frontend` mappában:
 
 ```bash
+cd server
 npm install
 ```
 
@@ -29,7 +39,5 @@ npm run build
 majd a `backend` mappában:
 
 ```bash
-npm start
+npm run start
 ```
-
-### 4. Tesztelés

@@ -1,6 +1,10 @@
-<h2>Add a new listing</h2>
-<form [formGroup]="listingForm" (ngSubmit)="onSubmit(listingForm.value)">
-    <input type="text" placeholder="Title..." formControlName="title" />
-    <input type="url" placeholder="Description..." formControlName="description" />
-    <button type="submit">Add</button>
-</form>
+<div class="form-listing">
+    <h3>Add a new listing</h3>
+    <form class="form" [formGroup]="listingForm" (ngSubmit)="onSubmit(listingForm.value)">
+        <div class="form">
+            <input type="text" placeholder="Title..." formControlName="title" />
+            <input type="url" placeholder="Description..." formControlName="description" />
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>
